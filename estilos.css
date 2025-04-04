@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --color1: rgb(253, 193, 193);
+    --color2: rgb(255, 255, 255);
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    background-color: ghostwhite;
+}
+
+h1, h2{
+    font-family: "PT Serif", serif;
+}
+
+header{
+    text-align: center;
+    background-color: var(--color1);
+    padding: 1em;
+}
+
+header img{
+    width: 7em;
+    margin-bottom: 0.7em;
+}
+
+nav a{
+    color: brown;
+    font-weight: bold;
+    font-size: 1em;
+    margin:0 0.5em;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: var(--color2)
+}
+
+.contenedor {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%; 
+}
+
+h1{
+    text-align: center;
+    color: brown;
+    margin: 0.5em 0;
+}
+
+#tienda article{
+    padding: 1.4em;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 1em;
+    box-shadow: 2px 3px 6px 1px rgba(0, 0, 0, 0.199);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#tienda h2{
+    color: rgb(255, 60, 0);
+}
+
+#tienda p{
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+#tienda a{
+    background-color: var(--color1);
+    padding: 0.5em;
+    border-radius: 100px;
+    font-weight: bold;
+    color: var(--color2);
+    width: fit-content;
+}
+
+/* MEDIA QUERY DE TABLET */
+@media all and (min-width:768px){
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header img{
+      margin: 0;
+    }
+
+    h1{
+        font-size: 2.3em;
+    }
+
+    #tienda {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */   
+        gap: 1.5em;
+    }
+
+    /* #tienda article{
+        width: 49%;
+    } */
+
+    #tienda article{
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 300px;
+        margin-bottom: 0;
+    }
+}
+
+/* MEDIA QUERY DE PC */
+@media all and (min-width:1200px){
+    h1{
+        font-size: 4em;
+    }
+}
